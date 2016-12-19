@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Set source and target directories
-powerline_fonts_dir=$( cd "$( dirname "$0" )" && pwd )
-
-find_command="find \"$powerline_fonts_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
+find_command="find \"$(cd "$( dirname "$0" )" && pwd)\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
 
 if [[ `uname` == 'Darwin' ]]; then
   # MacOS
